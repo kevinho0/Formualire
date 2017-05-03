@@ -13,7 +13,7 @@
 		$f = fopen("$file", "r");
 		$entete = fgetcsv($f,0,";");
 		$gare = array();
-		sort($gare);
+		arsort($gare);
 		while ($line = fgetcsv($f,0,";")) {
 			$gare[$line[3]] = $line[4];
 		}
@@ -29,6 +29,7 @@
 	<p>Descriptin de l'objet</p>
 	<input type ="text" name ="descr"/>
 	<input type ="submit" name ="Go" value="Trouve"/>
+	
  </form>
  
 </body>
